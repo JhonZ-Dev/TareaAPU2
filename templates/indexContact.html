@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" /> <!--Caracteres-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <!--Adapta el sitio a dispositivos moviles-->
+        <meta name="description" content="" /> <!--Descripcion del sitio-->
+        <meta name="author" content="" /> <!--Autor del sitio-->
+        <title>Validaciones</title> <!--Titulo del sitio-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!--Icono del sitio-->
+        
+        <!-- Bootstrap core CSS -->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" 
+        crossorigin="anonymous"></script> <!--Iconos-->
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,
+        200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i
+        900,900i" 
+        rel="stylesheet" />
+         <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" 
+        rel="stylesheet" />  
+        <!-- direccionas a la carpeta styles-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/estilosForm.css') }}">
+         <!--Libreria jQuery-->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <!--Libreria de sweetalert2-->
+        <script src="static/js/sweetalert2.min.js"></script> 
+        <!--Libreria de sweetalert2-->
+        <link rel="stylesheet" href="alertas/sweetalert2.css"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/sweetalert2.css') }}">
+        <!--AleLibreria de sweetalert2rtas-->
+        <script src="static/js/sweetalert2.all.js"></script> 
+
+
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/estilosPro.css') }}"> -->
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">Aplicaciones de Tecnologias Web</span>
+                <span class="site-heading-lower">Validación de formulario</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+
+<section class="page-section clearfix">
+  <div class="container">
+  <div class="intro">
+                    
+  <section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+  <div class="card bg-dark text-white" style="border-radius: 1rem;">
+  <div class="card-body p-5 text-center">
+
+  <form id="formulario">
+    <div class="mb-md-5 mt-md-4 pb-5">
+                      
+    <h2 class="fw-bold mb-2 text-uppercase">Contactanos</h2>
+
+    <div class="form-outline form-white mb-4">
+     <!---imput de tipo texto que  guardar el nombre-->                                 
+    <input type="texto" id="itNombre" class="form-control form-control-lg campo"/>
+    <!--Etiqueta label para identificar al input-->
+    <label class="form-label" for="typeEmailX" >Nombre</label>
+    <div id="mensaje1" class="errores">Dame tu Nombre</div>
+    </div>
+    <div class="form-outline form-white mb-4">
+    <!---imput de tipo texto que  guardar el Email-->
+    <input type="text" id="itEmail" class="form-control form-control-lg"/>
+    <!--Etiqueta label para identificar al input-->
+    <label class="form-label" for="typeEmailX" >Email</label>
+    <div class="errores" id="mensaje2" >Digite su email</div>
+    </div>
+                      
+    <div class="form-outline form-white mb-4">
+    <!---imput de tipo texto que  guardar el tema-->
+    <input type="text" id="itAsunto" class="form-control form-control-lg" reset/>
+    <!--Etiqueta label para identificar al input-->
+    <label class="form-label" for="typePasswordX">Tema</label>
+    <div class="errores" id="mensaje3">Digite el tema</div>
+    </div>
+
+    <div class="form-outline form-white mb-4">
+    <!---textarea para guardar el mensaje-->
+    <textarea type="" id="itMensaje" class="form-control form-control-lg" ></textarea>
+    <!--Etiqueta label para identificar al input-->
+    <label class="form-label" for="typePasswordX">Mensaje</label>
+    <div class="errores" id="mensaje4">Escriba su mensaje</div>
+    </div>
+
+    <!--Div con las clases de boostrap--> 
+    <div class="form-outline form-white mb-4" id="form1">
+    <!---Etiquta lab con su identificador-->
+    <label id="ebcaptchatext"></label>
+    <!---imput de tipo texto que  guardar el captcha-->
+    <input type="text" id="ebcaptchainput" 
+    class="form-control form-control-lg"/>
+    </div>
+    <div class="sep">
+      <!--Boton para confirmar el captcha-->
+    <button id="enviar" class="btn btn-outline-dark btn-lg px-5">
+      Confirmar</button>
+    </div>
+
+    <a class="btn btn-outline-light btn-lg px-5" id="bEnviar" onclick= "validar();">Enviar Mensaje</a>
+                                   
+  </form>
+                                    
+                      
+                                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                                      <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                      <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                                      <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                                    </div>
+                      
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Bootstrap core JS-->
+        <script src="static/js/validacion.js"></script> <!--Validaciones-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <!-- <script src="js/scripts.js"></script> -->
+    </body>
+</html>
